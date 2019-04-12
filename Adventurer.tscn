@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Adventurer.gd" type="Script" id=1]
+[ext_resource path="res://sprites/adventure_char_1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/adventure_char_5.png" type="Texture" id=3]
+[ext_resource path="res://sprites/adventure_char_2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/adventures_char_4.png" type="Texture" id=5]
+[ext_resource path="res://sprites/adventure_char_3.png" type="Texture" id=6]
+[ext_resource path="res://sprites/adventure_char_6.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 16.1415 )
+
+[node name="Adventurer" type="KinematicBody2D"]
+position = Vector2( 132.764, 70.7538 )
+scale = Vector2( 0.4, 0.4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 7.47269, 5.11893 )
+frames = SubResource( 1 )
+animation = "run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.368225, 3.93291 )
+shape = SubResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 44.6262, 1.38019 )
+
