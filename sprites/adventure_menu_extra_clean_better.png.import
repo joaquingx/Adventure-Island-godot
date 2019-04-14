@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex"
+path="res://.import/adventure_menu_extra_clean_better.png-b114997367e3a4922d5b7e573a085f97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/bebe_22.png"
-dest_files=[ "res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex" ]
+source_file="res://sprites/adventure_menu_extra_clean_better.png"
+dest_files=[ "res://.import/adventure_menu_extra_clean_better.png-b114997367e3a4922d5b7e573a085f97.stex" ]
 
 [params]
 

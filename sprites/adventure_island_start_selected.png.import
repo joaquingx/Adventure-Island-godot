@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex"
+path="res://.import/adventure_island_start_selected.png-903f0591a587797973936eaca8d273a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/bebe_22.png"
-dest_files=[ "res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex" ]
+source_file="res://sprites/adventure_island_start_selected.png"
+dest_files=[ "res://.import/adventure_island_start_selected.png-903f0591a587797973936eaca8d273a6.stex" ]
 
 [params]
 

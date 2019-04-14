@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex"
+path="res://.import/adventure_start_button.png-b3ee8bfb610326c15e3bab33d30ae79f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/bebe_22.png"
-dest_files=[ "res://.import/bebe_22.png-2a81c340c9e21be41d2ff55fc6ee9eaa.stex" ]
+source_file="res://sprites/adventure_start_button.png"
+dest_files=[ "res://.import/adventure_start_button.png-b3ee8bfb610326c15e3bab33d30ae79f.stex" ]
 
 [params]
 

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://sprites/adventure_menu_extra_clean_better.png" type="Texture" id=2]
+[ext_resource path="res://sprites/adventure_island_start.png" type="Texture" id=3]
+[ext_resource path="res://sprites/adventure_island_start_selected.png" type="Texture" id=4]
+[ext_resource path="res://sprites/adventure_island_continue.png" type="Texture" id=5]
+[ext_resource path="res://sprites/adventure_island_continue_selected.png" type="Texture" id=6]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -0.418121 )
+scale = Vector2( 0.625196, 0.374745 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 90
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 96.0
+margin_top = 90.0
+margin_right = 224.0
+margin_bottom = 170.0
+size_flags_horizontal = 4
+custom_constants/separation = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 36.0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 3 )
+texture_focused = ExtResource( 4 )
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 128.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

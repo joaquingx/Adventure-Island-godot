@@ -1,18 +1,14 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 const SPEED = 1000
 var velocity = Vector2()
 const GRAVITY = 500
 var collision = false
 var collision_times = 0
+
+func _ready():
+	velocity.y = -100
 
 func _physics_process(delta):
 	velocity.x = SPEED * delta
