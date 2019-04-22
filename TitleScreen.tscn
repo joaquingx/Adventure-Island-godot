@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://sprites/adventure_menu_extra_clean_better.png" type="Texture" id=2]
-[ext_resource path="res://sprites/adventure_island_start.png" type="Texture" id=3]
-[ext_resource path="res://sprites/adventure_island_start_selected.png" type="Texture" id=4]
-[ext_resource path="res://sprites/adventure_island_continue.png" type="Texture" id=5]
-[ext_resource path="res://sprites/adventure_island_continue_selected.png" type="Texture" id=6]
+[ext_resource path="res://sprites/GPL3-Free-as-in-Freedom.png" type="Texture" id=3]
+[ext_resource path="res://sprites/adventure_island_start.png" type="Texture" id=4]
+[ext_resource path="res://sprites/adventure_island_start_selected.png" type="Texture" id=5]
+[ext_resource path="res://sprites/adventure_island_continue.png" type="Texture" id=6]
+[ext_resource path="res://sprites/adventure_island_continue_selected.png" type="Texture" id=7]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,6 +15,13 @@ script = ExtResource( 1 )
 position = Vector2( 0, -0.418121 )
 scale = Vector2( 0.625196, 0.374745 )
 texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -15, 350 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -39,14 +47,14 @@ margin_bottom = 36.0
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 128.0
 margin_bottom = 16.0
-texture_normal = ExtResource( 3 )
-texture_focused = ExtResource( 4 )
+texture_normal = ExtResource( 4 )
+texture_focused = ExtResource( 5 )
 
 [node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 20.0
 margin_right = 128.0
 margin_bottom = 36.0
-texture_normal = ExtResource( 5 )
-texture_focused = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_focused = ExtResource( 7 )
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

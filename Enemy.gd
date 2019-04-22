@@ -37,6 +37,11 @@ func _physics_process(delta):
 			direction *= -1
 			$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
 			$RayCast2D.position.x *=-1
+		
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "Adventurer" in get_slide_collision(i).collider.name:
+					get_slide_collision(i).collider.dead()
 
 func _on_Timer_timeout():
 	queue_free() # Replace with function body.
