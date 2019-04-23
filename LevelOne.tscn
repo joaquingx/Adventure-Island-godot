@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://level_one.tres" type="TileSet" id=1]
+[ext_resource path="res://Adventurer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Snail.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Adventure island music.wav" type="AudioStream" id=4]
+[ext_resource path="res://adventure_parallax_no_floor.png" type="Texture" id=5]
+[ext_resource path="res://Crow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Rock.tscn" type="PackedScene" id=7]
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 60, 64 )
+format = 1
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0 )
+
+[node name="Adventurer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15.4436, 99.3856 )
+
+[node name="Snail3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 361.738, 64.9452 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 311.562, 67.8519 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 673.196, 64.9452 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 173.572, 72.6269 )
+scale = Vector2( 2, 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.1, 0.1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 250, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 128.352, 80.0903 )
+texture = ExtResource( 5 )
+
+[node name="Crow" parent="." instance=ExtResource( 6 )]
+position = Vector2( 528.174, 82.264 )
+
+[node name="Crow2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 924.778, 73.6096 )
+
+[node name="Rock" parent="." instance=ExtResource( 7 )]
+position = Vector2( 238.559, 120.056 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Rock2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 443.217, 120.496 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Rock3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600.342, 120.496 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Rock4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 743.824, 121.376 )
+scale = Vector2( 0.8, 0.8 )
+

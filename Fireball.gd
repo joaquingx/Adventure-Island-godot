@@ -26,6 +26,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Fireball_body_entered(body):
-	if "Enemy" in body.name:
+	if 'Snail' in body.name or 'Crow' in body.name:
+		print(body.name)
 		body.is_dead()
 	queue_free()

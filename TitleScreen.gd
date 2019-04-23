@@ -20,6 +20,6 @@ func _physics_process(delta):
 
 
 func _on_TextureButton_pressed():
-	if get_tree().change_scene('res://StageOne.tscn') != 0:
+	if get_tree().change_scene('res://LevelOne.tscn') != 0:
 		print('Cant open file')
 

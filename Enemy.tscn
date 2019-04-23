@@ -2,16 +2,16 @@
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/bebe_01.png" type="Texture" id=2]
-[ext_resource path="res://sprites/bebe_13.png" type="Texture" id=3]
-[ext_resource path="res://sprites/bebe_14.png" type="Texture" id=4]
-[ext_resource path="res://sprites/bebe_15.png" type="Texture" id=5]
-[ext_resource path="res://sprites/bebe_16.png" type="Texture" id=6]
-[ext_resource path="res://sprites/bebe_17.png" type="Texture" id=7]
-[ext_resource path="res://sprites/bebe_18.png" type="Texture" id=8]
-[ext_resource path="res://sprites/bebe_19.png" type="Texture" id=9]
-[ext_resource path="res://sprites/bebe_05.png" type="Texture" id=10]
-[ext_resource path="res://sprites/bebe_04.png" type="Texture" id=11]
-[ext_resource path="res://sprites/bebe_22.png" type="Texture" id=12]
+[ext_resource path="res://sprites/bebe_05.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bebe_13.png" type="Texture" id=4]
+[ext_resource path="res://sprites/bebe_14.png" type="Texture" id=5]
+[ext_resource path="res://sprites/bebe_15.png" type="Texture" id=6]
+[ext_resource path="res://sprites/bebe_16.png" type="Texture" id=7]
+[ext_resource path="res://sprites/bebe_17.png" type="Texture" id=8]
+[ext_resource path="res://sprites/bebe_18.png" type="Texture" id=9]
+[ext_resource path="res://sprites/bebe_19.png" type="Texture" id=10]
+[ext_resource path="res://sprites/bebe_22.png" type="Texture" id=11]
+[ext_resource path="res://sprites/bebe_04.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.83836, 12.0629 )
@@ -23,24 +23,24 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "run",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "jump",
+"name": "dead",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "dead",
+"name": "jump",
 "speed": 5.0
 } ]
 

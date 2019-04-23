@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://adventure_parallax_with_floor.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.1468, 30.0591 )
+
+[node name="level_one_tile" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 74.2788, 61.9652 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 161, 60, 63 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+position = Vector2( -13.5561, -15.1376 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+visible = false
+position = Vector2( 13.5561, 13.3302 )
+shape = SubResource( 1 )
+

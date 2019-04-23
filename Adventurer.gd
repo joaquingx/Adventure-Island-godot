@@ -68,7 +68,8 @@ func _physics_process(delta):
 	
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
-				if "Enemy" in get_slide_collision(i).collider.name:
+				#print(get_slide_collision(i).collider.name)
+				if "Snail" in get_slide_collision(i).collider.name:
 					dead()
 		
 		
