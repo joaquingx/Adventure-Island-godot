@@ -14,6 +14,7 @@ const JUMP_POWER = -180
 const FLOOR = Vector2(0, -1)
 const COBRA = preload("res://Cobra.tscn")
 const FIREBALL = preload("res://Fireball.tscn")
+const HAMMER = preload("res://Hammer.tscn")
 
 
 var velocity = Vector2()
@@ -50,12 +51,12 @@ func _physics_process(delta):
 			cobra.position = $Position2D.global_position
 		
 		if Input.is_action_just_pressed("alternative_shoot"):
-			var fireball = FIREBALL.instance()
-			fireball.set_fireball_direction(sign($Position2D.position.x))
+			var hammer = HAMMER.instance()
+			hammer.set_fireball_direction(sign($Position2D.position.x))
 				
-			get_parent().add_child(fireball)
+			get_parent().add_child(hammer)
 			$AnimatedSprite.play('throw')
-			fireball.position = $Position2D.global_position
+			hammer.position = $Position2D.global_position
 				
 		if is_on_floor():
 			jump_times = 0
