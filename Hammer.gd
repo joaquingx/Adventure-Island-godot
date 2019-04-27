@@ -28,9 +28,19 @@ func _physics_process(delta):
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
+func update_score(mob):
+	for index in get_parent().get_child_count():
+		if 'ParallaxBackground' in get_parent().get_child(index).name:
+			var parallax = get_parent().get_child(index)
+			for index2 in parallax.get_child_count():
+				if 'Score' in parallax.get_child(index2).name:
+					if 'Crow' in mob:
+						parallax.get_child(index2).score_crow()
+					if 'Snail' in mob:
+						parallax.get_child(index2).score_snail()
 
 func _on_Hammer_body_entered(body):
 	if 'Snail' in body.name or 'Crow' in body.name:
-		print(body.name)
+		update_score(body.name)
 		body.is_dead()
 	queue_free()

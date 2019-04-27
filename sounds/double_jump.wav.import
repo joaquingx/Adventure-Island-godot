@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/double_jump.wav-54b67d8b4ec8441bc849b9ec7d758c7b.sample"
+
+[deps]
+
+source_file="res://sounds/double_jump.wav"
+dest_files=[ "res://.import/double_jump.wav-54b67d8b4ec8441bc849b9ec7d758c7b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

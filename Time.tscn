@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://arcade_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Time.gd" type="Script" id=2]
+
+[node name="Time" type="RichTextLabel"]
+anchor_right = 0.48
+margin_right = 76.4
+margin_bottom = 40.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "IIIIIIIII"
+script = ExtResource( 2 )
+

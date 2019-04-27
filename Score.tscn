@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://arcade_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://inconsolata-font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Score.gd" type="Script" id=3]
+
+[node name="Score" type="RichTextLabel"]
+margin_left = 45.4023
+margin_top = 16.6784
+margin_right = 197.402
+margin_bottom = 56.6784
+custom_fonts/mono_font = ExtResource( 1 )
+custom_fonts/bold_italics_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "0"
+script = ExtResource( 3 )
+

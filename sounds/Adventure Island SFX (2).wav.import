@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Adventure Island SFX (2).wav-6b70ec387ae4b850c416f28d976cd0d0.sample"
+
+[deps]
+
+source_file="res://sounds/Adventure Island SFX (2).wav"
+dest_files=[ "res://.import/Adventure Island SFX (2).wav-6b70ec387ae4b850c416f28d976cd0d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

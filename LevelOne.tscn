@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://level_one.tres" type="TileSet" id=1]
 [ext_resource path="res://Adventurer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Snail.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Adventure island music.wav" type="AudioStream" id=4]
 [ext_resource path="res://adventure_parallax_no_floor.png" type="Texture" id=5]
-[ext_resource path="res://Crow.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Rock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Score.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Lives.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Time.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Crow.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Rock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Gift.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Gift_skate.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Fruit.tscn" type="PackedScene" id=13]
 
 [node name="LevelOne" type="Node2D"]
 
@@ -20,19 +26,23 @@ tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0
 position = Vector2( 15.4436, 99.3856 )
 
 [node name="Snail3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 361.738, 64.9452 )
+position = Vector2( 822.391, 100.435 )
 scale = Vector2( 2, 2 )
 
 [node name="Snail4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 311.562, 67.8519 )
+position = Vector2( 639.934, 106.21 )
 scale = Vector2( 2, 2 )
 
 [node name="Snail5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 673.196, 64.9452 )
+position = Vector2( 702.592, 101.511 )
 scale = Vector2( 2, 2 )
 
 [node name="Snail2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 173.572, 72.6269 )
+position = Vector2( 1058.89, 96.287 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1329.19, 94.1361 )
 scale = Vector2( 2, 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -49,25 +59,73 @@ motion_mirroring = Vector2( 250, 0 )
 position = Vector2( 128.352, 80.0903 )
 texture = ExtResource( 5 )
 
-[node name="Crow" parent="." instance=ExtResource( 6 )]
-position = Vector2( 528.174, 82.264 )
+[node name="Score" parent="ParallaxBackground" instance=ExtResource( 6 )]
+margin_left = 165.03
+margin_top = 10.5483
+margin_right = 317.03
+margin_bottom = 50.5483
+bbcode_text = "0"
 
-[node name="Crow2" parent="." instance=ExtResource( 6 )]
+[node name="Lives" parent="ParallaxBackground" instance=ExtResource( 7 )]
+
+[node name="Time" parent="ParallaxBackground" instance=ExtResource( 8 )]
+margin_left = 2.98615
+margin_top = 37.4802
+margin_right = 119.986
+margin_bottom = 54.4802
+scroll_active = false
+
+[node name="Crow" parent="." instance=ExtResource( 9 )]
+position = Vector2( 786.283, 87.2828 )
+
+[node name="Crow2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 924.778, 73.6096 )
 
-[node name="Rock" parent="." instance=ExtResource( 7 )]
-position = Vector2( 238.559, 120.056 )
+[node name="Rock" parent="." instance=ExtResource( 10 )]
+position = Vector2( 265.445, 60.5475 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Rock2" parent="." instance=ExtResource( 7 )]
+[node name="Rock2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 443.217, 120.496 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Rock3" parent="." instance=ExtResource( 7 )]
+[node name="Rock3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 600.342, 120.496 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Rock4" parent="." instance=ExtResource( 7 )]
+[node name="Rock4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 743.824, 121.376 )
 scale = Vector2( 0.8, 0.8 )
 
+[node name="Rock5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1087.25, 116.716 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Area2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 529.34, 108.756 )
+
+[node name="Gift" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1192.66, 118.065 )
+
+[node name="Fruit" parent="." instance=ExtResource( 13 )]
+position = Vector2( 132.697, 51.9622 )
+
+[node name="Fruit2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 298.891, 45.4916 )
+
+[node name="Fruit3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 478.366, 91.4672 )
+
+[node name="Fruit4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 570.317, 82.9532 )
+
+[node name="Fruit5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 756.263, 78.1854 )
+
+[node name="Fruit6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 856.388, 52.9839 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="ParallaxBackground/Time" method="_on_Timer_timeout"]

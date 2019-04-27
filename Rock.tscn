@@ -4,7 +4,7 @@
 [ext_resource path="res://sprites/adventure_rock.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.00632, 8.34773 )
+extents = Vector2( 8.00632, 7.50426 )
 
 [node name="Rock" type="KinematicBody2D"]
 position = Vector2( 117.074, 71.9166 )

@@ -11,6 +11,7 @@ var is_dead = false
 func is_dead():
 	is_dead = true
 	velocity = Vector2(10,0)
+	$DeadSound.play()
 	$AnimatedSprite.play('dead')
 	$CollisionShape2D.call_deferred("set_disabled", true)
 	velocity.y += -100
