@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Snail.gd" type="Script" id=1]
-[ext_resource path="res://sprites/adv_snail01.png" type="Texture" id=2]
-[ext_resource path="res://sprites/adventure_snail02.png" type="Texture" id=3]
-[ext_resource path="res://sprites/adventure_snail03.png" type="Texture" id=4]
+[ext_resource path="res://sprites/mobs/adv_snail01.png" type="Texture" id=2]
+[ext_resource path="res://sprites/mobs/adventure_snail02.png" type="Texture" id=3]
+[ext_resource path="res://sprites/mobs/adventure_snail03.png" type="Texture" id=4]
 [ext_resource path="res://sounds/died_mob.wav" type="AudioStream" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -29,6 +29,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "normal"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

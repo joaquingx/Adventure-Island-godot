@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Lives.gd" type="Script" id=1]
 [ext_resource path="res://sprites/character/original_char01.png" type="Texture" id=2]
-[ext_resource path="res://arcade_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/arcade_classic.tres" type="DynamicFont" id=3]
 
 [node name="Lives" type="Control"]
 anchor_right = 1.0

@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://sprites/adventure_menu_extra_clean_better.png" type="Texture" id=2]
-[ext_resource path="res://sprites/GPL3-Free-as-in-Freedom.png" type="Texture" id=3]
-[ext_resource path="res://sprites/adventure_island_start.png" type="Texture" id=4]
-[ext_resource path="res://sprites/adventure_island_start_selected.png" type="Texture" id=5]
-[ext_resource path="res://sprites/adventure_island_continue.png" type="Texture" id=6]
-[ext_resource path="res://sprites/adventure_island_continue_selected.png" type="Texture" id=7]
+[ext_resource path="res://sprites/title_screen/adventure_menu_extra_clean_better.png" type="Texture" id=2]
+[ext_resource path="res://sprites/title_screen/GPL3-Free-as-in-Freedom.png" type="Texture" id=3]
+[ext_resource path="res://sprites/title_screen/adventure_island_start.png" type="Texture" id=4]
+[ext_resource path="res://sprites/title_screen/adventure_island_start_selected.png" type="Texture" id=5]
+[ext_resource path="res://sprites/title_screen/adventure_island_continue.png" type="Texture" id=6]
+[ext_resource path="res://sprites/title_screen/adventure_island_continue_selected.png" type="Texture" id=7]
 [ext_resource path="res://sounds/01 Title Screen.wav" type="AudioStream" id=8]
 
 [node name="TitleScreen" type="Node2D"]

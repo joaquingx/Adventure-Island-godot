@@ -13,8 +13,6 @@ const EXTRA_SPEED = 40
 const GRAVITY = 10
 const JUMP_POWER = -180
 const FLOOR = Vector2(0, -1)
-const COBRA = preload("res://Cobra.tscn")
-const FIREBALL = preload("res://Fireball.tscn")
 const HAMMER = preload("res://Hammer.tscn")
 
 
@@ -77,14 +75,6 @@ func _physics_process(delta):
 			$JumpSound.play()
 			velocity.y = JUMP_POWER
 			jump_times += 1			
-		
-		if Input.is_action_just_pressed("ui_accept"):
-			var cobra = COBRA.instance()
-			get_parent().add_child(cobra)
-			$AnimatedSprite.play('throw')
-			cobra.position = $Position2D.global_position
-		
-
 				
 		if is_on_floor():
 			jump_times = 0

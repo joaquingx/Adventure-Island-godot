@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Crow.gd" type="Script" id=1]
-[ext_resource path="res://sprites/adveture_crow01.png" type="Texture" id=2]
-[ext_resource path="res://sprites/adventure_crow02.png" type="Texture" id=3]
-[ext_resource path="res://sprites/adventure_crow03.png" type="Texture" id=4]
+[ext_resource path="res://sprites/mobs/adventure_crow02.png" type="Texture" id=2]
+[ext_resource path="res://sprites/mobs/adveture_crow01.png" type="Texture" id=3]
+[ext_resource path="res://sprites/mobs/adventure_crow03.png" type="Texture" id=4]
 [ext_resource path="res://sounds/died_mob.wav" type="AudioStream" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -35,7 +35,6 @@ position = Vector2( 1.35092, 2.16143 )
 scale = Vector2( 0.963975, 1 )
 frames = SubResource( 1 )
 animation = "normal"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

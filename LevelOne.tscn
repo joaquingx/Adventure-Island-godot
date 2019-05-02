@@ -3,8 +3,8 @@
 [ext_resource path="res://level_one.tres" type="TileSet" id=1]
 [ext_resource path="res://Adventurer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Snail.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Adventure island music.wav" type="AudioStream" id=4]
-[ext_resource path="res://adventure_parallax_no_floor.png" type="Texture" id=5]
+[ext_resource path="res://sounds/Adventure island music.wav" type="AudioStream" id=4]
+[ext_resource path="res://sprites/background/adventure_parallax_no_floor.png" type="Texture" id=5]
 [ext_resource path="res://Score.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Lives.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Time.tscn" type="PackedScene" id=8]
@@ -126,6 +126,7 @@ position = Vector2( 756.263, 78.1854 )
 position = Vector2( 856.388, 52.9839 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="ParallaxBackground/Time" method="_on_Timer_timeout"]
