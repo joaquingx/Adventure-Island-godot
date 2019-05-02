@@ -17,16 +17,19 @@ const HAMMER = preload("res://Hammer.tscn")
 
 
 var velocity = Vector2()
-var jump_times = 0
+
 
 var is_dead = false
 var is_trip = false
 var is_throw =  false
 var is_skate = false
 var is_armed = false
+var can_jump = true
 
 func is_on_limits():
 	var left_limit = $Camera2D.get_camera_screen_center().x - 160
+	#print(left_limit)
+	#print('Adventurer' + str(position))
 	if position.x-5 < left_limit:
 		return false
 	return true
@@ -41,12 +44,24 @@ func is_on_time():
 					time_left = parallax.get_child(index2).get_time()
 	return time_left > 0
 	
+func delete_time():
+	for index in get_parent().get_child_count():
+		if 'ParallaxBackground' in get_parent().get_child(index).name:
+			var parallax = get_parent().get_child(index)
+			for index2 in parallax.get_child_count():
+				if 'Time' in parallax.get_child(index2).name:
+					parallax.get_child(index2).delete_time(2)
+					
 func _physics_process(delta):
 	if not is_dead and not is_on_time():
 		dead()
+	$Camera2D.limit_left = $Camera2D.get_camera_screen_center().x - 160
 	if not is_dead and not is_trip and not is_throw:
-		$Camera2D.limit_left = $Camera2D.get_camera_screen_center().x - 160
+		# basic controls here
 		if Input.is_action_pressed('ui_right'):
+			if Input.is_action_just_pressed('ui_up') and can_jump:
+				$JumpSound.play()
+				velocity.y = (JUMP_POWER*1.5)
 			velocity.x = SPEED
 			$AnimatedSprite.flip_h = false
 			if not is_skate:
@@ -55,7 +70,10 @@ func _physics_process(delta):
 				$AnimatedSprite.play('skate')
 			if sign($Position2D.position.x) == -1:
 				$Position2D.position.x *= -1
-		elif Input.is_action_pressed('ui_left') and is_on_limits():
+		elif Input.is_action_pressed('ui_left'):
+			if Input.is_action_just_pressed('ui_up') and can_jump:
+				$JumpSound.play()
+				velocity.y = (JUMP_POWER*1.5)
 			velocity.x = -SPEED
 			$AnimatedSprite.flip_h = true
 			if not is_skate:
@@ -64,25 +82,29 @@ func _physics_process(delta):
 				$AnimatedSprite.play('skate')
 			if sign($Position2D.position.x) == 1:
 				$Position2D.position.x *= -1
-		else:
+		elif not Input.is_action_pressed('ui_left') and not Input.is_action_pressed('ui_right') and not Input.is_action_just_pressed('ui_up'):
 			velocity.x = 0
 			if is_on_floor():
 				if not is_skate:
 					$AnimatedSprite.play('idle')
 				else:
 					$AnimatedSprite.play('skate')
-		if Input.is_action_just_pressed('ui_up') and jump_times < 1:
+		elif Input.is_action_just_pressed('ui_up') and can_jump:
+			print("Entre por acasito, donde solo salto")
 			$JumpSound.play()
-			velocity.y = JUMP_POWER
-			jump_times += 1			
+			velocity.y = JUMP_POWER 
 				
-		if is_on_floor():
-			jump_times = 0
-		else:
+		if not is_on_limits() and Input.is_action_pressed('ui_left'):
+			velocity.x = 0
+			
+		if not is_on_floor():
 			if not is_skate:
 				$AnimatedSprite.play('jump')
 			else:
 				$AnimatedSprite.play('skate')
+			can_jump = false
+		else:
+			can_jump = true
 			
 		if Input.is_action_just_pressed("alternative_shoot"):
 			if is_armed:
@@ -103,6 +125,7 @@ func _physics_process(delta):
 				if "Snail" in get_slide_collision(i).collider.name:
 					dead()
 				if "Rock" in get_slide_collision(i).collider.name:
+					delete_time()
 					$RockSound.play()
 					get_slide_collision(i).collider.dead()
 					trip()
@@ -118,8 +141,8 @@ func _physics_process(delta):
 		velocity.x = 2
 		velocity = move_and_slide(velocity)
 	
-	print('Adventurer' + str(position))
-	print('Camera:' + str($Camera2D.get_camera_screen_center()))
+
+	#print('Camera:' + str($Camera2D.get_camera_screen_center()))
 
 func trip():
 	is_trip = true
@@ -163,7 +186,6 @@ func get_armed():
 	is_armed = true
 
 func _on_Timer_timeout():
-	print('entre aca')
 	if 	get_tree().change_scene('res://TitleScreen.tscn') != 0:
 		print('Cant open file')
 

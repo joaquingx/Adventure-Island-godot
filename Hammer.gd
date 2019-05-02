@@ -43,4 +43,7 @@ func _on_Hammer_body_entered(body):
 	if 'Snail' in body.name or 'Crow' in body.name:
 		update_score(body.name)
 		body.is_dead()
-	queue_free()
+	if 'Adventurer' in body.name:
+		false
+	else:
+		queue_free()

@@ -20,8 +20,8 @@ func _physics_process(delta):
 	clear()
 	add_text(str_time())
 
-func delete_time():
-	time -= 1	
+func delete_time(x):
+	time -= x	
 
 func get_time():
 	return time
@@ -32,4 +32,4 @@ func get_time():
 
 
 func _on_Timer_timeout():
-	delete_time()
+	delete_time(1)

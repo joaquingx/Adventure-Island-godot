@@ -3,15 +3,15 @@
 [ext_resource path="res://Adventurer.gd" type="Script" id=1]
 [ext_resource path="res://sprites/character/original_char01.png" type="Texture" id=2]
 [ext_resource path="res://sprites/character/original_char02.png" type="Texture" id=3]
-[ext_resource path="res://sprites/character/original_char03.png" type="Texture" id=4]
-[ext_resource path="res://sprites/character/original_char04.png" type="Texture" id=5]
-[ext_resource path="res://sprites/character/original_char05.png" type="Texture" id=6]
-[ext_resource path="res://sprites/character/original_char06.png" type="Texture" id=7]
-[ext_resource path="res://sprites/character/original_char08.png" type="Texture" id=8]
-[ext_resource path="res://sprites/character/original_char10.png" type="Texture" id=9]
-[ext_resource path="res://sprites/character/original_char09.png" type="Texture" id=10]
-[ext_resource path="res://sprites/character/adventure_skate01.png" type="Texture" id=11]
-[ext_resource path="res://sprites/character/adventure_skate02.png" type="Texture" id=12]
+[ext_resource path="res://sprites/character/adventure_skate01.png" type="Texture" id=4]
+[ext_resource path="res://sprites/character/adventure_skate02.png" type="Texture" id=5]
+[ext_resource path="res://sprites/character/original_char10.png" type="Texture" id=6]
+[ext_resource path="res://sprites/character/original_char08.png" type="Texture" id=7]
+[ext_resource path="res://sprites/character/original_char09.png" type="Texture" id=8]
+[ext_resource path="res://sprites/character/original_char03.png" type="Texture" id=9]
+[ext_resource path="res://sprites/character/original_char04.png" type="Texture" id=10]
+[ext_resource path="res://sprites/character/original_char05.png" type="Texture" id=11]
+[ext_resource path="res://sprites/character/original_char06.png" type="Texture" id=12]
 [ext_resource path="res://sprites/character/original_char07.png" type="Texture" id=13]
 [ext_resource path="res://sounds/09 You Died.wav" type="AudioStream" id=14]
 [ext_resource path="res://sounds/hammer_sound.wav" type="AudioStream" id=15]
@@ -25,30 +25,30 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "run",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "throw",
+"name": "skate",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "dead",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "trip",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "skate",
-"speed": 5.0
+"name": "run",
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
@@ -68,6 +68,7 @@ script = ExtResource( 1 )
 position = Vector2( 7.47269, 5.11893 )
 frames = SubResource( 1 )
 animation = "skate"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -76,7 +77,7 @@ position = Vector2( 7.09714, 4.95244 )
 shape = SubResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 26.0707, 1.17628 )
+position = Vector2( 30.498, 1.17628 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
