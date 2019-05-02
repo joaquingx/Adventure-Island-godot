@@ -8,7 +8,7 @@ extends KinematicBody2D
 #func _ready():
 #	pass # Replace with function body.
 
-var SPEED = 60
+var SPEED = 200
 const EXTRA_SPEED = 40
 const GRAVITY = 10
 const JUMP_POWER = -180

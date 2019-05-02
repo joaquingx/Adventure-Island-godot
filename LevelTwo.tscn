@@ -41,6 +41,30 @@ scale = Vector2( 2, 2 )
 position = Vector2( 639.934, 106.21 )
 scale = Vector2( 2, 2 )
 
+[node name="Snail19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 639.934, 106.21 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 319.021, 93.178 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 434.68, 107.024 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 142.274, 98.8795 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 190.33, 98.8795 )
+scale = Vector2( 2, 2 )
+
+[node name="Snail15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 190.33, 98.8795 )
+scale = Vector2( 2, 2 )
+
 [node name="Snail5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 702.592, 101.511 )
 scale = Vector2( 2, 2 )
@@ -92,6 +116,10 @@ scroll_base_scale = Vector2( 0.1, 0.1 )
 motion_mirroring = Vector2( 250, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 128.352, 80.0903 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 128.352, 80.0903 )
 texture = ExtResource( 5 )
 
@@ -190,7 +218,6 @@ wait_time = 5.0
 autostart = true
 
 [node name="ChangeScene" parent="." instance=ExtResource( 14 )]
-position = Vector2( 100.442, 112.259 )
-target_stage = "res://LevelTwo.tscn"
+position = Vector2( 2814.37, 105.797 )
 
 [connection signal="timeout" from="Timer" to="ParallaxBackground/Time" method="_on_Timer_timeout"]

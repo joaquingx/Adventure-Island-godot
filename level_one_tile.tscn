@@ -17,8 +17,21 @@ region_rect = Rect2( 0, 161, 60, 63 )
 position = Vector2( -13.5561, -15.1376 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
-visible = false
 position = Vector2( 13.5561, 13.3302 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 170.788, 59.8137 )
+rotation = -0.785398
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 161, 60, 63 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+position = Vector2( -13.5561, -15.1376 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+position = Vector2( 13.6796, 13.0488 )
 shape = SubResource( 1 )
 
 [node name="stage_one" type="Sprite" parent="."]
